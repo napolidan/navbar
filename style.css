@@ -1,0 +1,83 @@
+body{
+    height: 100vh;
+}
+
+.topBar{
+    height: 5%;
+}
+
+.topBar h1{
+    font-size: 2rem;
+}
+
+.sideBar, .sideBar *{
+    transition: all 0.5s ease;
+}
+
+.sideBar{
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sideBar:hover{
+    width: 250%;
+    background-color: rgb(7, 87, 207);
+}
+
+.sideBar a{
+    color: white;
+    overflow: hidden;
+}
+
+.wrapper{
+    width: 300%;
+    overflow: hidden;
+}
+
+li {
+    width: 200%;
+}
+
+li:hover{
+    background-color: rgb(11, 73, 166);
+}
+
+i{
+    width: 25px !important;
+    margin: 2rem;
+    margin-right: 5rem;
+}
+
+.sideBar:hover .wrapper i{
+    margin-right: 1rem;
+}
+
+span{
+    font-size: 1.5rem;
+    display: inline-block;
+}
+
+.sideBar:hover + .wrapper span{
+    visibility: visible;
+}
+
+.content{
+    overflow: scroll;
+    background-color: white;
+    opacity: 100%;
+    transition: all 1s ease;
+}
+
+.sideBar:hover + .content{
+    opacity: 0.15;
+}
+
+.contentContainer{
+    height: 95%;
+    display: grid;
+    grid-template-columns: 100px auto;
+}
+
+

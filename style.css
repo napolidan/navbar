@@ -2,12 +2,35 @@ body{
     height: 100vh;
 }
 
-.topBar{
-    height: 5%;
+.topContainer{
+    height: 8%;
+    width: 100vw;
 }
 
-.topBar h1{
-    font-size: 2rem;
+.mainContainer{
+    height: 92%;
+}
+
+.topContainer h1{
+    display: inline-block;
+    font-size: 1.5rem;
+    height: min-content;
+}
+
+.left *, .right *{
+    margin: auto;
+}
+
+#hamburguer{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    width: 100px;
+    height: 100%;
 }
 
 .sideBar, .sideBar *{
@@ -21,11 +44,6 @@ body{
     overflow: hidden;
 }
 
-.sideBar:hover{
-    width: 250%;
-    background-color: rgb(7, 87, 207);
-}
-
 .sideBar a{
     color: white;
     overflow: hidden;
@@ -37,47 +55,100 @@ body{
 }
 
 li {
-    width: 200%;
+    width: 100vw;
 }
 
 li:hover{
     background-color: rgb(11, 73, 166);
 }
 
-i{
+.sideBar i{
     width: 25px !important;
     margin: 2rem;
     margin-right: 5rem;
 }
 
-.sideBar:hover .wrapper i{
-    margin-right: 1rem;
-}
-
-span{
+.sideBar span{
     font-size: 1.5rem;
     display: inline-block;
 }
 
-.sideBar:hover + .wrapper span{
-    visibility: visible;
-}
-
-.content{
+.contentContainer{
+    height: 100%;
+    grid-template-rows: 90% 10%;
     overflow: scroll;
     background-color: white;
     opacity: 100%;
     transition: all 1s ease;
 }
 
-.sideBar:hover + .content{
-    opacity: 0.15;
+.content{
 }
 
-.contentContainer{
-    height: 95%;
-    display: grid;
-    grid-template-columns: 100px auto;
+.footer{
+    width: 100%;
+    height: fit-content;
 }
 
+/* FOR DEKSTOP */
+@media (min-width: 990px) {
 
+    .mainContainer{
+        display: flex;
+    }
+
+    .sideBar{
+        width: 100px;
+        max-width: 250px;
+    }
+
+    .contentContainer{
+        width: 100%;
+    }
+
+    .open{
+        width: 20rem;
+    }
+
+    .open .wrapper i{
+        margin-right: 2.5rem;
+    }
+
+    .desktop{
+        display: inline;
+    }
+
+    .mobile{
+        display: none;
+    }
+}
+
+/* FOR MOBILE */
+@media (max-width: 989.99px) {
+
+    .mainContainer{
+      display: grid;
+      grid-template-columns: 100px auto;
+    }
+
+    .open{
+        width: 250%;
+        background-color: rgb(7, 87, 207);
+    }
+
+    .open .wrapper i{
+        margin-right: 1rem;
+    }
+
+    .open + .contentContainer{
+        opacity: 0.15;
+    }
+    
+    .desktop{
+        display: none;
+    }
+
+    .mobile{
+        display: inline;
+    }
+}

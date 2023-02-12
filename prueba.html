@@ -11,60 +11,63 @@
     <title>Responsive</title>
 </head>
 <body>
+
     <div class="topContainer text-bg-dark d-flex flex-row justify-content-between text-center">
+
         <div class="left d-flex flex-row">
-            <button id="hamburguer"><i class="fa-solid fa-burger fa-fw fs-3"></i></button>
+            <button id="hamburguer"><i class="fa-solid fa-bars fa-fw fs-3"></i></button>
             <div>
-                <h1 class="m-0">Hamburguer Menu</h1>
+                <h1 class="desktop m-0 user-select-none">Hamburguer Menu</h1>
             </div>
         </div>
+
         <div class="right d-flex pe-4">
-            <div class="pe-4 desktop"><h1>Search Bar</h1></div>
+            <input class="form-control me-4" type="text" placeholder="Search Bar">
             <i class="fa-solid fa-magnifying-glass fa-fw fs-3"></i>
         </div>
+
     </div>
+
+
     <div class="mainContainer">
-        <div id="sideBar" class="sideBar text-bg-primary">
+
+
+        <div id="sideBar" class="sideBar text-bg-primary user-select-none no-drag">
             <div class="wrapper d-flex">
                 <ul class="list-unstyled">
                     <li>
-                        <a class="text-decoration-none d-block text-white fs-3" href="#">
-                            <i class="fa-solid fa-pizza-slice fa-fw"></i>
-                            <span>Pizza</span>
+                        <a draggable="false" class="text-decoration-none d-block text-white fs-3" href="#">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                            <span>Home</span>
                         </a>
                     </li>
                     <li>
-                        <a class="text-decoration-none d-block text-white fs-3" href="#">
-                            <i class="fa-solid fa-drum fa-fw"></i>
-                            <span>Drum</span>
+                        <a draggable="false" class="text-decoration-none d-block text-white fs-3" href="#">
+                            <i class="fa-solid fa-globe fa-fw"></i>
+                            <span>About</span>
                         </a>
                     </li>
                     <li>
-                        <a class="text-decoration-none d-block text-white fs-3" href="#">
-                            <i class="fa-solid fa-umbrella fa-fw"></i>
-                            <span>Umbrella</span>
+                        <a draggable="false" class="text-decoration-none d-block text-white fs-3" href="#">
+                            <i class="fa-solid fa-gears fa-fw"></i>
+                            <span>Services</span>
                         </a>
                     </li>
                     <li>
-                        <a class="text-decoration-none d-block text-white fs-3" href="#">
-                            <i class="fa-solid fa-gift fa-fw"></i>
-                            <span>Gift</span>
+                        <a draggable="false" class="text-decoration-none d-block text-white fs-3" href="#">
+                            <i class="fa-solid fa-comments fa-fw"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                    <div class="divisor"></div>
+                    <li>
+                        <a draggable="false" class="text-decoration-none d-block text-white fs-3" href="#">
+                            <i class="fa-solid fa-user fa-fw"></i>
+                            <span>Profile</span>
                         </a>
                     </li>
                     <li>
-                        <a class="text-decoration-none d-block text-white fs-3" href="#">
-                            <i class="fa-solid fa-lemon fa-fw"></i>
-                            <span>Lemon</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="text-decoration-none d-block text-white fs-3" href="#">
-                            <i class="fa-solid fa-crown fa-fw"></i>
-                            <span>Crown</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="text-decoration-none d-block text-white git" href="https://github.com/napolidan">
+                        <a draggable="false" class="text-decoration-none d-block text-white git" href="https://github.com/napolidan">
                             <i class="fa fa-github fa-fw"></i>
                             <span>GitHub</span>
                         </a>
@@ -72,65 +75,57 @@
                 </ul>
             </div> 
         </div>
-        <div class="contentContainer p-4 d-flex flex-column flex-grow-1 justify-content-between">
-            <div class="content">
-                <h1 class="mb-0">Fully Responsive Canvas</h1>
-                <small class="text-secondary">Currently on <span class="desktop">desktop</span><span class="mobile">mobile</span></small>
 
-                <div class="created mt-5 mb-5"><h2>Created using</h2></div>
+
+        <div class="contentContainer p-4 d-flex flex-column flex-grow-1 justify-content-between">
+
+            <div class="content">
+
+                <h1 class="mb-0">Fully Responsive Canvas</h1>
+
+                <small class="text-secondary">Currently on <span class="desktop">desktop</span><span class="mobile">mobile</span></small>
 
                 <div class="tall d-flex">
                     <div class="cards align-items-center justify-content-center">
 
-                        <div class="module p-5 red">
-                            <img src="html.png" alt="">
-                        </div>
-    
-                        <div class="module p-5 yellow">
-                            <img src="css.png" alt="">
-                        </div>
-    
-                        <div class="module p-5 blue">
-                            <img src="js.png" alt="">
-                        </div>
+                        
     
                     </div>
                 </div>
 
             </div>
-            <div class="footer bottom-0 text-center text-secondary mt-5"><small>Created by Daniel Napoli with <span class="text-primary">Bootstrap</span></small></div>
+
+            <div class="footer bottom-0 text-center text-secondary mt-5 d-grid user-select-none">
+
+                <div class="desktop"></div>
+                <small>Created by Daniel Napoli with <span class="text-primary">Bootstrap</span></small>
+                <div class="desktop d-flex flex-row justify-content-end">
+                    <div class="desktop module m-1 red">
+                        <img draggable="false" src="html.png" alt="">
+                    </div>
+
+                    <div class="desktop module m-1 yellow">
+                        <img draggable="false" src="css.png" alt="">
+                    </div>
+
+                    <div class="desktop module m-1 blue">
+                        <img draggable="false" src="js.png" alt="">
+                    </div>
+                </div>
+
+            </div>
         </div>
+
+
     </div>
+
     <script>
 
         document.getElementById('hamburguer').addEventListener("click", function toggleSideBar(){
             document.getElementById("sideBar").classList.toggle('open')
         });
 
-        document.querySelector('.module:nth-child(1)').addEventListener("mouseover", function colorRed(){
-            document.querySelector('.created').style.color = 'rgb(255, 136, 85)';
-        })
-
-        document.querySelector('.module:nth-child(2)').addEventListener("mouseover", function colorRed(){
-            document.querySelector('.created').style.color = 'rgb(85, 156, 255)';
-        })
-
-        document.querySelector('.module:nth-child(3)').addEventListener("mouseover", function colorRed(){
-            document.querySelector('.created').style.color = 'rgb(224, 210, 56)';
-        })
-
-        document.querySelector('.module:nth-child(1)').addEventListener("mouseout", function colorRed(){
-            document.querySelector('.created').style.color = 'rgb(175, 175, 175)';
-        })
-
-        document.querySelector('.module:nth-child(2)').addEventListener("mouseout", function colorRed(){
-            document.querySelector('.created').style.color = 'rgb(175, 175, 175)';
-        })
-
-        document.querySelector('.module:nth-child(3)').addEventListener("mouseout", function colorRed(){
-            document.querySelector('.created').style.color = 'rgb(175, 175, 175)';
-        })
-
     </script>
+    
 </body>
 </html>

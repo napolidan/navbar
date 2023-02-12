@@ -1,5 +1,6 @@
 body{
     height: 100vh;
+    -webkit-user-drag: none;
 }
 
 .topContainer{
@@ -12,7 +13,6 @@ body{
 }
 
 .topContainer h1{
-    display: inline-block;
     font-size: 1.5rem;
     height: min-content;
 }
@@ -31,6 +31,7 @@ body{
 	outline: inherit;
     width: 100px;
     height: 100%;
+    margin: auto;
 }
 
 .sideBar, .sideBar *{
@@ -49,6 +50,10 @@ body{
     overflow: hidden;
 }
 
+.no-drag{
+    user-drag: none;
+}
+
 .wrapper{
     width: 300%;
     overflow: hidden;
@@ -60,6 +65,22 @@ li {
 
 li:hover{
     background-color: rgb(11, 73, 166);
+    z-index: -1;
+}
+
+.divisor{
+    position: absolute;
+    background-color: white;
+    width: 75px;
+    height: 4px;
+    border-radius: 3px;
+    margin-left: 10px;
+    margin-block: -2px;
+    z-index: 1000;
+}
+
+.open .divisor{
+    width: 230px;
 }
 
 .sideBar i{
@@ -93,28 +114,16 @@ li:hover{
     transition: all 0.5s ease;
 }
 
-.tall{
-    height: 100%;
-}
-
-.cards{
-    display: grid;
-    margin: auto;
-    margin-top: 0;
-    grid-template-columns: repeat(3, autofill);
-    justify-items: center;
-    width: 70%;
-}
-
 .module{
     transition: all 0.5s ease;
     opacity: 0.5;
     display: inline-block;
-    width: 250px;
-    height: 250px !important;
-    background-color: rgb(157, 157, 157);
-    border-radius: 20px;
-    border: 10px solid rgb(133, 133, 133);
+    width: 30px;
+    height: 30px !important;
+    padding: 1px;
+    /* background-color: rgb(157, 157, 157); */
+    border-radius: 5px;
+    /* border: 1px solid rgb(133, 133, 133); */
 }
 
 .module img{
@@ -127,7 +136,7 @@ li:hover{
     opacity: 1;
 }
 
-.module:nth-child(1):hover{
+/* .module:nth-child(1):hover{
     background-color: rgb(255, 136, 85);
     border-color: rgb(226, 109, 59);
 }
@@ -140,7 +149,7 @@ li:hover{
 .module:nth-child(3):hover{
     background-color: rgb(255, 241, 85);
     border-color: rgb(224, 210, 56);
-}
+} */
 
 .module:hover img{
     filter: grayscale(0%);
@@ -148,7 +157,7 @@ li:hover{
 
 .footer{
     width: 100%;
-    height: fit-content;
+    align-items: center;
 }
 
 /* FOR DEKSTOP */
@@ -175,18 +184,16 @@ li:hover{
         margin-right: 2.5rem;
     }
 
-    .desktop{
-        font-style: italic;
+    .desktop, .desktop *{
         display: inline;
     }
 
-    .mobile{
+    .mobile, .mobile *{
         display: none;
     }
-
-    .cards{
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
+    
+    .footer{
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
@@ -211,16 +218,12 @@ li:hover{
         opacity: 0.15;
     }
     
-    .desktop{
+    .desktop, .desktop *{
         display: none;
     }
 
-    .mobile{
+    .mobile, .mobile *{
         font-style: italic;
         display: inline;
-    }
-
-    .cards{
-        gap:20px;
     }
 }

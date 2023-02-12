@@ -68,6 +68,10 @@ li:hover{
     margin-right: 5rem;
 }
 
+.git{
+    font-size: 2.3rem;
+}
+
 .sideBar span{
     font-size: 1.5rem;
     display: inline-block;
@@ -82,7 +86,64 @@ li:hover{
     transition: all 1s ease;
 }
 
-.content{
+.created{
+    width: 100%;
+    text-align: center;
+    color: rgb(175, 175, 175);
+    transition: all 0.5s ease;
+}
+
+.tall{
+    height: 100%;
+}
+
+.cards{
+    display: grid;
+    margin: auto;
+    margin-top: 0;
+    grid-template-columns: repeat(3, autofill);
+    justify-items: center;
+    width: 70%;
+}
+
+.module{
+    transition: all 0.5s ease;
+    opacity: 0.5;
+    display: inline-block;
+    width: 250px;
+    height: 250px !important;
+    background-color: rgb(157, 157, 157);
+    border-radius: 20px;
+    border: 10px solid rgb(133, 133, 133);
+}
+
+.module img{
+    transition: all 0.5s ease;
+    width: 100%;
+    filter: grayscale(100%);
+}
+
+.module:hover{
+    opacity: 1;
+}
+
+.module:nth-child(1):hover{
+    background-color: rgb(255, 136, 85);
+    border-color: rgb(226, 109, 59);
+}
+
+.module:nth-child(2):hover{
+    background-color: rgb(85, 156, 255);
+    border-color: rgb(45, 119, 222);
+}
+
+.module:nth-child(3):hover{
+    background-color: rgb(255, 241, 85);
+    border-color: rgb(224, 210, 56);
+}
+
+.module:hover img{
+    filter: grayscale(0%);
 }
 
 .footer{
@@ -115,11 +176,17 @@ li:hover{
     }
 
     .desktop{
+        font-style: italic;
         display: inline;
     }
 
     .mobile{
         display: none;
+    }
+
+    .cards{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
     }
 }
 
@@ -149,6 +216,11 @@ li:hover{
     }
 
     .mobile{
+        font-style: italic;
         display: inline;
+    }
+
+    .cards{
+        gap:20px;
     }
 }

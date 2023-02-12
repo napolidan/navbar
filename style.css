@@ -1,6 +1,7 @@
 body{
     height: 100vh;
     -webkit-user-drag: none;
+    overflow: hidden;
 }
 
 .topContainer{
@@ -66,21 +67,6 @@ li {
 li:hover{
     background-color: rgb(11, 73, 166);
     z-index: -1;
-}
-
-.divisor{
-    position: absolute;
-    background-color: white;
-    width: 75px;
-    height: 4px;
-    border-radius: 3px;
-    margin-left: 10px;
-    margin-block: -2px;
-    z-index: 1000;
-}
-
-.open .divisor{
-    width: 230px;
 }
 
 .sideBar i{
@@ -195,6 +181,21 @@ li:hover{
     .footer{
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    .divisor{
+        position: absolute;
+        background-color: white;
+        width: 75px;
+        height: 4px;
+        border-radius: 3px;
+        margin-left: 10px;
+        margin-block: -2px;
+        z-index: 1000;
+    }
+    
+    .open .divisor{
+        width: 230px;
+    }
 }
 
 /* FOR MOBILE */
@@ -202,7 +203,15 @@ li:hover{
 
     .mainContainer{
       display: grid;
-      grid-template-columns: 100px auto;
+      grid-template-columns: 60px auto;
+    }
+
+    .sideBar i{
+        margin: 1rem !important;
+    }
+
+    .sideBar span{
+        font-size: 1rem;
     }
 
     .open{
@@ -225,5 +234,20 @@ li:hover{
     .mobile, .mobile *{
         font-style: italic;
         display: inline;
+    }
+
+    .divisor{
+        position: absolute;
+        background-color: white;
+        width: 40px;
+        height: 2px;
+        border-radius: 3px;
+        margin-left: 10px;
+        margin-block: -1px;
+        z-index: 1000;
+    }
+    
+    .open .divisor{
+        width: 130px;
     }
 }
